@@ -20,15 +20,20 @@ __Head count in each plane__
 presently I haven't found a source of information that tells you the capacity of a flight. This historical data could be bought from the airlines themselves and predicted
 this script uses local UTC time within its filters on an updating datasource so it can be run at any time of day to get the most accurate answer
 
-maybe i could go to an aggregator to source flight fullness. 
+- Maybe i could go to an aggregator to source flight fullness. Data sources aren't great/free.
 
-seats are in a different airport but the seat capacity seems wrong. 
+- I have found a dataset with many plane capacities in the seatcapacity.ipynb file but the seat capacity seems wrong. 
 
 __Terminal 5 issue__  
-gates A1-A23, B32 - B48,  c52 - C66
-
+- We could determine the t5 population by filtering by the gates A1-A23, B32 - B48,  c52 - C66
+- I think the data provided by the API is able to tell us the terminal. 
 
 __change of datasource__
+This project has changed datasources from scraping from the Heathrow page to an API called flight aware
 - datasource is scraped from the live JSON that feeds the tables on https://www.heathrow.com/departures and https://www.heathrow.com/arrivals
 - since I last looked at this, Heathrow have banned get requests to their server that feeds the website. Very annoying. 
 - I've found something at https://flightaware.com/ that looks like it can deliver the same deal. 
+
+Pausing this project until I can find a better source of information for number of seats on a plane, or plane capacity. 
+
+I could 
